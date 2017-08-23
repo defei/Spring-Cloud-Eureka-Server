@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: eureka-ha
+  profiles:
+    active: local
