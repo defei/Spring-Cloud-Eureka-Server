@@ -1,11 +1,15 @@
+management:
+  contextPath:
 server:
-  port: 7777
+  port: 18000
 eureka:
   instance:
     hostname: localhost
     preferIpAddress: true
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrlPath: ${management.context-path}/health
   client:
     serviceUrl:
-      defaultZone: http://localhost:7777/eureka/
+      defaultZone: http://localhost:18000/eureka/
   server:
     evictionIntervalTimerInMs: 1000
