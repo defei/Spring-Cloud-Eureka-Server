@@ -10,6 +10,12 @@ eureka:
     healthCheckUrlPath: ${management.context-path}/health
   client:
     serviceUrl:
-      defaultZone: http://localhost:18000/eureka/
+      defaultZone: http://user:codelogger@localhost:18000/eureka/
   server:
     evictionIntervalTimerInMs: 1000
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: codelogger
